@@ -1,40 +1,49 @@
 #include "main.h"
 #include <stdlib.h>
+
 /**
- * argstostr - main entry
- * @ac: int input
- * @av: double pointer array
- * Return: 0
- */
+* argstostr - concatenates all the arguments of your program.
+* @ac: arguments count
+* @av: arguments vector
+*
+* Return: a pointer to a new string, or NULL if it fails
+*/
 char *argstostr(int ac, char **av)
 {
-	int a, b, c = 0, d = 0;
-	char *str;
+  char *str, *t;
+  int a, b, c, fbi = 0;
 
-	if (ac == 0 || av == NULL)
-		return (NULL);
+  if (ac == 0 || av == NULL)
+     return (NULL);
 
-	for (a = 0; a < ac; a++)
-	{
-		for (b = 0; av[a][b]; b++)
-			d++;
-	}
-	d += ac;
+  for (a = 0; a < ac; a++)
+  {
+     t = av[a];
+     b = 0;
 
-	str = malloc(sizeof(char) * d + 1);
-	if (str == NULL)
-		return (NULL);
-	for (a = 0; a < ac; a++)
-	{
-	for (b = 0; av[a][b]; b++)
-	{
-		str[c] = av[a][b];
-		c++;
-	}
-	if (str[c] == '\0')
-	{
-		str[c++] = '\b';
-	}
-	}
-	return (str);
+     while (t[b++])
+        fbi++;
+     fbi++;
+  }
+
+  str = (char *)malloc(sizeof(char) * (fbi + 1));
+  if (str == NULL)
+     return (NULL);
+
+  for (a = 0, b = 0; a < ac && b < fbi; a++)
+  {
+     t = av[a];
+     c = 0;
+
+     while (t[c])
+     {
+        str[b] = t[c];
+        c++;
+        b++;
+     }
+     str[b++] = '\n';
+  }
+  str[b] = '\0';
+
+  return (str);
 }
