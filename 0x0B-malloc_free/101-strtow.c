@@ -21,11 +21,11 @@ int count_word(char *s)
 		else if (flag == 0)
 		{
 			flag = 1;
-			y++;
+			w++;
 		}
 	}
 
-	return (y);
+	return (w);
 }
 /**
  * **strtow - splits a string into words
@@ -37,10 +37,10 @@ int count_word(char *s)
 char **strtow(char *str)
 {
 	char **matrix, *tmp;
-	int h, j = 0, fbi = 0, words, x = 0, start, end;
+	int h, j = 0, len = 0, words, x = 0, start, end;
 
-	while (*(str + fbi))
-		fbi++;
+	while (*(str + len))
+		len++;
 	words = count_word(str);
 	if (words == 0)
 		return (NULL);
@@ -49,7 +49,7 @@ char **strtow(char *str)
 	if (matrix == NULL)
 		return (NULL);
 
-	for (h = 0; h <= fbi; h++)
+	for (h = 0; h <= len; h++)
 	{
 		if (str[h] == ' ' || str[h] == '\0')
 		{
@@ -62,7 +62,7 @@ char **strtow(char *str)
 				while (start < end)
 					*tmp++ = str[start++];
 				*tmp = '\0';
-				matrix[k] = tmp - x;
+				matrix[j] = tmp - x;
 				j++;
 				x = 0;
 			}
