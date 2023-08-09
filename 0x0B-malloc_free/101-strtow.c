@@ -21,11 +21,11 @@ int count_word(char *s)
 		else if (flag == 0)
 		{
 			flag = 1;
-			w++;
+			y++;
 		}
 	}
 
-	return (w);
+	return (y);
 }
 /**
  * **strtow - splits a string into words
