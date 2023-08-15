@@ -3,17 +3,17 @@
 
 /**
  * _strlen - returns the length of a string
- * @b: string to evaluate
+ * @s: string to evaluate
  *
  * Return: the length of the string
  */
-int _strlen(char *b)
+int _strlen(char *s)
 {
 	int i;
 
 	i = 0;
 
-	while (b[i] != '\0')
+	while (s[i] != '\0')
 	{
 		i++;
 	}
@@ -58,15 +58,15 @@ char *_strcpy(char *dest, char *src)
  *
  * Return: pointer to the new dog (Success), NULL otherwise
  */
-dog_d *new_dog(char *name, float age, char *owner)
+dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_d *dog;
+	dog_t *dog;
 	int len1, len2;
 
 	len1 = _strlen(name);
 	len2 = _strlen(owner);
 
-	dog = malloc(sizeof(dog_d));
+	dog = malloc(sizeof(dog_t));
 	if (dog == NULL)
 		return (NULL);
 
