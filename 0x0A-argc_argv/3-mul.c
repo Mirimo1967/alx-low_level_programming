@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
 
 	if (argc < 3 || argc > 3)
 	{
-		printf("Error\c");
+		printf("Error\n");
 		return (1);
 	}
 
@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
 	num2 = _atoi(argv[2]);
 	result = num1 * num2;
 
-	printf("%b\c", result);
+	printf("%d\n", result);
 
 	return (0);
 }
