@@ -17,7 +17,7 @@ int count_word(char *s)
 	for (a = 0; s[a] != '\0'; a++)
 	{
 		if (s[a] == ' ')
-			flag = 0;
+i			flag = 0;
 		else if (flag == 0)
 		{
 			flag = 1;
@@ -28,13 +28,13 @@ int count_word(char *s)
 	return (b);
 }
 /**
- * **strtow - splits a string into words
+ * **strtoq - splits a string into words
  * @str: string to split
  *
  * Return: pointer to an array of strings (Success)
  * or NULL (Error)
  */
-char **strtow(char *str)
+char **strtoq(char *str)
 {
 	char **matrix, *tmp;
 	int i, k = 0, len = 0, words, c = 0, start, end;
