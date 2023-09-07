@@ -1,24 +1,24 @@
-i#include <stdlib.h>
+#include <stdlib.h>
 #include "main.h"
 
 /**
  * *_memset - fills memory with a constant byte
- * @a: memory area to be filled
+ * @s: memory area to be filled
  * @b: char to copy
- * @c: number of times to copy b
+ * @n: number of times to copy b
  *
- * Return: pointer to the memory area a
+ * Return: pointer to the memory area s
  */
-char *_memset(char *a, char b, unsigned int c)
+char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int t;
+	unsigned int i;
 
-	for (t = 0; t < c; t++)
+	for (i = 0; i < n; i++)
 	{
-		a[t] = b;
+		s[i] = b;
 	}
 
-	return (a);
+	return (s);
 }
 
 /**
