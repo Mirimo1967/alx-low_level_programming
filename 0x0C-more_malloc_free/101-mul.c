@@ -5,8 +5,8 @@
 #define ERR_MSG "Error"
 
 /**
- * is_digit - checks if a string contains a non-digit char
- * @s: string to be evaluated
+ * is_digit - it checks if a string contains a non-digit char
+ * @s: the string to be evaluated
  *
  * Return: 0 if a non-digit is found, 1 otherwise
  */
@@ -24,10 +24,10 @@ int is_digit(char *s)
 }
 
 /**
- * _strlen - returns the length of a string
- * @s: string to evaluate
+ * _strlen - this returns the length of a string
+ * @s: the string to evaluate
  *
- * Return: the length of the string
+ * Return:length of the string
  */
 int _strlen(char *s)
 {
@@ -41,7 +41,7 @@ int _strlen(char *s)
 }
 
 /**
- * errors - handles errors for main
+ * errors - this handles errors for main
  */
 void errors(void)
 {
@@ -51,8 +51,8 @@ void errors(void)
 
 /**
  * main - multiplies two positive numbers
- * @argc: number of arguments
- * @argv: array of arguments
+ * @argc: the number of arguments
+ * @argv: an array of arguments
  *
  * Return: always 0 (Success)
  */
