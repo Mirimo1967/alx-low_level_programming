@@ -11,17 +11,17 @@ int pop_listint(listint_t **h)
 {
 	listint_t *current;
 
-	int node count;
+	int node_count;
 
 
-	if (!head || !*h)
+	if (!h || !*h)
 		return (0);
 
-	node count = (*h)->n;
+	node_count = (*h)->n;
 
 	current = (*h)->next;
 	free(*h);
 	*h = current;
 
-	return (node count);
+	return (node_count);
 }
