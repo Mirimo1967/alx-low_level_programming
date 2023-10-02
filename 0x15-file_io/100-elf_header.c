@@ -253,22 +253,22 @@ void close_elf(int elf)
 {
 	if (close(elf) == -1)
 	{
-OBOBOB		dprintf(STDERR_FILENO,
+		dprintf(STDERR_FILENO,
 			"Error: Can't close fd %d\n", elf);
-OBOBOB		exit(98);
+		exit(98);
 	}
 }
-OBOBOB
+
 /**
  * main - Displays the information contained in the
  * ELF header at the start of an ELF file.
-OBOBOB * @argc: The number of arguments supplied to the program.
+ * @argc: The number of arguments supplied to the program.
  * @argv: An array of pointers to the arguments.
-OBOBOB *
+ *
  * Return: 0 on success.
  *
  * Description: If the file is not an ELF File or
-OBOBOB * the function fails - exit code 98.
+ * the function fails - exit code 98.
  */
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
@@ -312,3 +312,4 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	close_elf(o);
 	return (0);
 }
+
